@@ -9,9 +9,9 @@ function checkForPalindrome(input) {
         return;
     }
 
-    input = input.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const filteredInput = input.toLowerCase().replace(/[^A-Za-z0-9]/g, '');
 
-    const isPalindrome = input === input.split('').reverse().join('');
+    const isPalindrome = filteredInput === filteredInput.split('').reverse().join('');
 
     if (isPalindrome) {
         resultDiv.innerHTML = `<strong>${input}</strong> is a palindrome!`;
